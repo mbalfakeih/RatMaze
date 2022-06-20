@@ -11,7 +11,7 @@ Levi https://github.com/LeviHerring - For reading my rants about this game and h
 
 fsce https://github.com/fsce1 https://ko-fi.com/fsce1 - For suffering through me talking about the game when her brain was completely dead
 
-Furbetii https://twitter.com/furbetii https://ko-fi.com/furbetti - For the rat sprite and emotional support
+Furbetii https://twitter.com/furbetii https://ko-fi.com/furbetti - For sprites and constantly hearing me mumble about this while trying to draw
 
 \
 They would never help me they didn't do this I swear
