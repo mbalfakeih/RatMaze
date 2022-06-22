@@ -13,7 +13,7 @@ public class RemoveText : MonoBehaviour
     
     IEnumerator Wait()
     {
-        yield return new WaitForSecondsRealtime(6);
+        yield return new WaitForSecondsRealtime(8);
         text.SetActive(false);
     }
 
