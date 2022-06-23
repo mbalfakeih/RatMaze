@@ -10,6 +10,7 @@ public class Win : MonoBehaviour
     public GameObject Light2D;
     public GameObject Camera;
     private AudioSource winAudio;
+    public Transform player;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,5 +33,14 @@ public class Win : MonoBehaviour
         GlobalLight.SetActive(true);
         Spotlight.SetActive(false);
         Light2D.SetActive(false);
+        StartCoroutine(Wait());
+    }
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(3);
+        player.position = new Vector3(50, 0, 0);
+        GlobalLight.SetActive(false);
+        Spotlight.SetActive(true);
+        Light2D.SetActive(true);
     }
 }
