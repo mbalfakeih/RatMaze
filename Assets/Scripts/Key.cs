@@ -25,6 +25,13 @@ public class Key : MonoBehaviour
         key = true;
         sprite.enabled = false;
         text.SetActive(true);
+        StartCoroutine(Delete());
+    }
+
+    IEnumerator Delete()
+    {
+        yield return new WaitForSeconds(20);
+        text.SetActive(false);
     }
 
 }

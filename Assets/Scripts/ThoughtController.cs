@@ -15,6 +15,7 @@ public class ThoughtController : MonoBehaviour
         DialogueSpeed = 0.5f; //Higher is slower
         //NextSentence();
         StartCoroutine(WriteSentence());
+        StartCoroutine(Delete());
     }
 
     // Update is called once per frame
@@ -41,6 +42,12 @@ public class ThoughtController : MonoBehaviour
             yield return new WaitForSeconds(DialogueSpeed);
         }
         index++;
+    }
+
+    IEnumerator Delete()
+    {
+        yield return new WaitForSeconds(20);
+        DialogueText.text = "";
     }
 
 }

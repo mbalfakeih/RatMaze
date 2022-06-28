@@ -11,6 +11,8 @@ public class Win : MonoBehaviour
     public GameObject Camera;
     private AudioSource winAudio;
     public Transform player;
+    private bool playing;
+    public int level;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,11 @@ public class Win : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        winAudio.Play(0);
+        if (!playing)
+        {
+            winAudio.Play(0);
+            playing = true;
+        }
     }
     private void OnTriggerStay2D(Collider2D collider)
     {
@@ -38,9 +44,10 @@ public class Win : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(3);
-        player.position = new Vector3(50, 0, 0);
+        player.position = new Vector3(level*50, 0, 0); //slight teleporation glitch where you can't move for a second
         GlobalLight.SetActive(false);
         Spotlight.SetActive(true);
         Light2D.SetActive(true);
+        playing = false;
     }
 }

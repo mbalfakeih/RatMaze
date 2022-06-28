@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lock : MonoBehaviour
 {
     public GameObject keyObject;
+    public GameObject LockMessage;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +23,13 @@ public class Lock : MonoBehaviour
         Debug.Log("hit door");
         if (keyObject.GetComponent<Key>().key)
         {
+            LockMessage.SetActive(false);
             Debug.Log("open door");
             Destroy(gameObject);
         }
         else
         {
-            //need key text appears
+            LockMessage.SetActive(true);
         }
     }
 }
