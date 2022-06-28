@@ -19,16 +19,10 @@ public class Screams : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (screaming)
-        //{
-            //screams.volume = Vector3.Distance(transform.position, player.position);
-        //}
-        //Circle collider, volume based on distance from rat
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("SCREAM PLEASE");
         screams.Play(0);
         screaming = true;
     }

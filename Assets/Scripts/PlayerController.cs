@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 
 {
-    Rigidbody2D rigidbody;
-    SpriteRenderer sprite;
+    private new Rigidbody2D rigidbody;
+    //SpriteRenderer sprite;
     Vector2 curMovementInput;
-    public float speedMultiplier;
+    public static float speedMultiplier;
     public float frictionAmount;
     Vector2 curRBmovement;
-    private Animator animation;
+    private new Animator animation;
     public float Rotatespeed = 5f;
     bool start = false;
     //[SerializeField] private FieldofView fieldofView;
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         speedMultiplier = 0;
         rigidbody = GetComponent<Rigidbody2D>();
         animation = GetComponent<Animator>();
-        sprite = GetComponent<SpriteRenderer>();
+        //sprite = GetComponent<SpriteRenderer>();
         animation.enabled = false;
         
         StartCoroutine(Wait());

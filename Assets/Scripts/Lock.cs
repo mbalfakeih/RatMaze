@@ -25,5 +25,9 @@ public class Lock : MonoBehaviour
             Debug.Log("open door");
             Destroy(gameObject);
         }
+        else
+        {
+            //need key text appears
+        }
     }
 }
