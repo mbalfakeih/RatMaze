@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Lock : MonoBehaviour
 {
     public GameObject keyObject;
     public GameObject LockMessage;
+    public GameObject QuestionDialog;
     // Start is called before the first frame update
     void Start()
     {

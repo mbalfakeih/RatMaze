@@ -8,11 +8,11 @@ public class ThoughtController : MonoBehaviour
     public TextMeshPro DialogueText;
     public string[] Sentences;
     private int index = 0;
-    private float DialogueSpeed;
+    public float DialogueSpeed = 0.5f; //Higher is slower
     // Start is called before the first frame update
     void Start()
     {
-        DialogueSpeed = 0.5f; //Higher is slower
+        //DialogueSpeed = 0.5f; //Higher is slower
         //NextSentence();
         StartCoroutine(WriteSentence());
         StartCoroutine(Delete());

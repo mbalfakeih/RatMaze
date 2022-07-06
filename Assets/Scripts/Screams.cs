@@ -8,6 +8,7 @@ public class Screams : MonoBehaviour
     private AudioSource screams;
     public Transform player;
     private bool screaming;
+    private float distance;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,10 @@ public class Screams : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        screams.Play(0);
-        screaming = true;
+        if (!screaming)
+        {
+            screams.Play(0);
+            screaming = true;
+        }
     }
 }
