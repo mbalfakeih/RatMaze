@@ -16,6 +16,8 @@ public class StaminaBar : MonoBehaviour
 
     public static StaminaBar instance;
 
+    public PlayerController player;
+
     private void Awake()
     {
         instance = this;
@@ -43,6 +45,7 @@ public class StaminaBar : MonoBehaviour
     {
         if(currentStamina - amount >= 0)
         {
+            player.speedMultiplier = 2.5f;
             StartCoroutine(ReduceStamina(amount));
 
             if(regen != null)
@@ -56,6 +59,7 @@ public class StaminaBar : MonoBehaviour
         {
             Debug.Log("Not enough stamina");
             staminaBar.value = 0;
+            player.speedMultiplier = 1.5f;
         }
     }
 

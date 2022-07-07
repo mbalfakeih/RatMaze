@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
             if (Time.time > nextActionTime && Input.GetKey(KeyCode.Space))
             {
-                speedMultiplier = 2.5f;
+                //speedMultiplier = 2.5f;
                 nextActionTime = Time.time + 0.2f;
                 StaminaBar.instance.UseStamina(0.5f);
             }

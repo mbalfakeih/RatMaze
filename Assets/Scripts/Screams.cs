@@ -6,7 +6,6 @@ public class Screams : MonoBehaviour
 {
     private CircleCollider2D collider;
     private AudioSource screams;
-    public Transform player;
     private bool screaming;
     private float distance;
     // Start is called before the first frame update
