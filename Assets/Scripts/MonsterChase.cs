@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MonsterChase : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class MonsterChase : MonoBehaviour
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
+    public GameObject GameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,15 @@ public class MonsterChase : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            //go to game over screen and play rat scream
+            player.GetComponent<AudioSource>().Play(0);
+            GameOver.SetActive(true);
+            StartCoroutine(Reset());
         }
+    }
+
+    IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(0);
     }
 }
